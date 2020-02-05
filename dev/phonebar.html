@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    <title>cti</title>
+    <link href="css/cti.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="softphonebar" style="position: relative;">
+    <div class="mrg5" id="peerStatus">
+        <span id="phoneAgentStatus">
+            <a href="#" id="IdleDisable" class="IdleDisable userStatus"
+               style="color: #53d466;">
+                <span class="ponit" style="background-color: #53d466;"></span>
+                <span id="seatStatusText">未注册</span>
+                <span class="line"></span>
+            </a>
+            <span id="phoneConfigStatus"></span>
+        </span>
+        <span class="softphone_timer">
+            <span id="peerTimeState" class="peerTimeState">00:00:00:00</span>
+            <span class="line"></span>
+        </span>
+    </div>
+    <div class="mrg5" id="callStatus">
+        <input type="text" id="callout-input" placeholder="输入手机号" value=""
+               class="ipt fl"/>
+        <ul id="callStatusList">
+            <li>
+                <a href="#" class="DialEnable" id="DialEnable"
+                   onclick="phonebar.call()">呼叫
+                    <span class="icon outcallIcon"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="HangupEnable" id="HangupEnable"
+                   onClick="phonebar.gua()">挂机
+                    <span class="icon handupIcon"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <audio id="phonebarmedia" style="width:200px;" loop="loop"></audio>
+</div>
+
+<script src="lib/sip-0.15.10.js"></script>
+<script src="js/utill.js"></script>
+<script src="js/phonebar.js"></script>
+
